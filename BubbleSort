@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Array1 {
+public class BubbleSort {
 
 	public static void main(String[] args) {
 		//making the given array and printint it to show
