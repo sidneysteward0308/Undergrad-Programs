@@ -1,5 +1,5 @@
 import java.util.*;
-public class Array2 {
+public class ArrayAsOneVariable {
 
 	public static void main(String[] args) {
 		//setting up array and printing it for show
