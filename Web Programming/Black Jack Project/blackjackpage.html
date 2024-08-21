@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Black Jack</title>
+<link href="blackjackstyle.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+<form>
+  <input id="start" type="radio" name="start" required="required"/>
+  <label id="label-start" for="start">Start</label>
+  <input id="stand" type="radio"/>
+  <label id="label-stand" for="stand">Stand</label>
+  <input id="hit-e" type="radio"/>
+  <label class="label-hit" for="hit-e">Hit</label>
+  <input id="hit-d" type="radio"/>
+  <label class="label-hit" for="hit-d">Hit</label>
+  <input id="hit-c" type="radio"/>
+  <label class="label-hit" for="hit-c">Hit</label>
+  <div id="setting_container">
+    <div class="setting">
+      <div class="setting__body setting__body--dealer">
+        <div class="setting__labels setting__labels--dealer">
+          <h2 class="setting__labels--main">Dealer's Hand</h2>
+          <div class="setting__labels--total dealer-total"><span class="sm">Dealer's</span> Total</div>
+        </div>
+        <div class="cards">
+          <div class="card--da card--a card">
+            <div class="card__face"></div>
+          </div>
+          <div class="card--db card--b card"> 
+            <div class="card__face"></div>
+          </div>
+          <div class="card--dc card--c card"> 
+            <div class="card__face"></div>
+          </div>
+          <div class="card--dd card--d card"> 
+            <div class="card__face"></div>
+          </div>
+          <div class="card--de card--e card">
+            <div class="card__face"></div>
+          </div>
+        </div>
+      </div>
+      <div class="setting__body setting__body--player">
+        <div class="setting__labels setting__labels--player">
+          <h2 class="setting__labels--main">Player's Hand</h2>
+          <div class="setting__labels--total user-total"><span class="sm">Player's</span> Total</div>
+        </div>
+        <div class="cards">
+          <div class="card--ua card--a card">
+            <div class="card__face"></div>
+          </div>
+          <div class="card--ub card--b card"> 
+            <div class="card__face"></div>
+          </div>
+          <div class="card--uc card--c card"> 
+            <div class="card__face"></div>
+          </div>
+          <div class="card--ud card--d card"> 
+            <div class="card__face"></div>
+          </div>
+          <div class="card--ue card--e card">
+            <div class="card__face"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="message" id="player_bust">
+      <div class="message__interior"> 
+        <p class="message__label">You bust, Dealer wins!</p>
+      </div>
+    </div>
+    <div class="message" id="dealer_bust">
+      <div class="message__interior"> 
+        <p class="message__label">Dealer busts, you win!</p>
+    </div>
+    </div>
+    <div class="message" id="game_result">
+      <div class="message__interior"> 
+        <p class="message__label">You Win!</p>
+      </div>
+      <div class="message__interior"> 
+        <p class="message__label">Push</p>
+      </div>
+      <div class="message__interior"> 
+        <p class="message__label">Dealer Wins!</p>
+      </div>
+    </div>
+  </div>
+</form>
+<div class="footer">
+	<a href="homepage.html">
+		<p>Return Home</p>
+	</a>
+</div>
+</body>
+</html>

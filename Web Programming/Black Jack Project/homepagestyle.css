@@ -1,0 +1,51 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url("homepagebackgroundimage.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #035f5a;
+  z-index: 200;
+  color: white;
+  text-align: center;
+}
+
+.button {
+  display: flex;
+  justify-content: space-around;
+  height: 250px;
+  width: 100%;
+  padding-top: 5%;
+}
+
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}

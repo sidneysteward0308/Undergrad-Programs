@@ -1,0 +1,194 @@
+<HTML>
+<HEAD>
+<TITLE>WHEEL OF FORTUNE</TITLE>
+<style>
+*
+{
+    margin: 0;
+    padding:0;
+    font-family;
+}
+
+body{
+    background-image:url(money.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height:100vh;
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position:relative;
+    width:800px;
+    height:800px;
+}
+
+.container .spinButton{ 
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    position: absolute;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 800;
+    color:#d7bf23;
+    width: 90px;
+    height:90px;
+    background: black;
+    border-radius: 50%;
+    z-index:10;
+    cursor: pointer;
+    
+}
+.reform-form{
+    display: inline-block;
+}
+
+.container .spinButton::before {
+    content: '';
+    width: 20px;
+    height:30px;
+    position: absolute;
+    right:-17px;
+    background: black;
+    clip-path: polygon(100% 51%, 0 74%, 0 31%); /*css clip-path maker used*/
+}
+
+.container .wheel{ 
+    
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    top: 100px;
+    left: 100px;
+    background:#9abc90 ;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #111, 0 0 0 25px #d7bf23, 0 0 0 35px #111;
+    overflow: hidden;
+    animation-name: Spin;
+    animation-duration: 2500ms;   
+    
+    animation-timing-function: cubic-bezier(0.50, -0.255, 0, 1.35);
+    }
+    
+
+.container .wheel .wedge-number{
+ display: flex;
+ justify-content:center;
+ align-items:center;
+ font-weight: 800;
+ text-shadow: 5px 5px 4px rgb(28, 27, 27) ;
+ color: white;
+ width: 50%;
+ height: 50%;
+ position: absolute;
+ background:var(--clr);
+ transform-origin: bottom right;
+ transform: rotate(calc(45deg * var(--i)));
+ clip-path: polygon(0 0, 60% 0, 100% 100%, 0 60%);
+}
+.container .wheel .wedge-number span{
+position: absolute;
+transform: rotate(45deg);
+}
+
+ .confetti{
+    top:-100px;
+    position: absolute;
+    width:10px;
+    height:10px;
+    
+    animation: confettiAni 1800ms linear infinite;}
+
+
+@keyframes Spin{
+    from{
+    transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+        
+    }
+}
+@keyframes confettiAni{
+    from{
+    transform: translateY(0) rotate(0deg);
+    }
+
+    to {
+       transform: translateY(100vh) rotate(360deg); 
+    }
+     
+    
+}
+
+     
+    
+
+
+
+
+</style>
+</HEAD>
+<body>
+    <div class="container">
+        <div class="spinButton">Spin The Wheel!</div>
+        <div class="wheel">
+            <div class="wedge-number" style="--i:1;--clr:#0d7545;"><span>$3600</span></div>
+            <div class="wedge-number" style="--i:2;--clr:rgb(142, 142, 134);"><span>$700</span></div>
+            <div class="wedge-number" style="--i:3;--clr:#0d7545;;"><span>$2500</span></div>
+            <div class="wedge-number" style="--i:4;--clr:rgb(142, 142, 134);"><span>$400</span></div>
+            <div class="wedge-number" style="--i:5;--clr:#0d7545;"><span>Bankrupt!</span></div>
+            <div class="wedge-number" style="--i:6;--clr:rgb(142, 142, 134);"><span>$1500</span></div>
+            <div class="wedge-number" style="--i:7;--clr:#0d7545;;"><span>$850</span></div>
+            <div class="wedge-number" style="--i:8;--clr:rgb(142, 142, 134);"><span>$1400</span></div>
+        </div>
+   
+        <form class="spinButton" action="http://127.0.0.1:5500/index.html?">
+            <button class="spinButton" type="submit">Spin The Wheel!</button>
+            
+        </form>
+    </div>
+
+    <div class = "confetti" style="left:5% ; top: px ; background-color:red;"></div>
+    <div class = "confetti" style="left:10% ; top:-50 ;background-color:blue ;"></div>
+    <div class = "confetti" style="left:15% ; top:10 ;background-color: purple;"></div>
+    <div class = "confetti" style="left:20% ; top:50 ;background-color:yellow ;"></div>
+    <div class = "confetti" style="left:25% ; top: ;background-color:hotpink ;"></div>
+    <div class = "confetti" style="left:30% ; top: -50;background-color:yellowgreen ;"></div>
+    <div class = "confetti" style="left:35% ; top:10 ;background-color: violet ;"></div>
+    <div class = "confetti" style="left:40% ; top:50 ;background-color: orange;"></div>
+    <div class = "confetti" style="left:45% ; top: ;background-color:red ;"></div>
+    <div class = "confetti" style="left:50% ; top:-50 ;background-color:blue ;"></div>
+    <div class = "confetti" style="left:55%; top:10 ;background-color:purple ;"></div>
+    <div class = "confetti" style="left:60% ; top:50 ;background-color:yellow ;"></div>
+    <div class = "confetti" style="left:65% ; top: ;background-color:hotpink ;"></div>
+    <div class = "confetti" style="left:70% ; top:-50 ;background-color:yellowgreen ;"></div>
+    <div class = "confetti" style="left:75% ; top:10 ;background-color:violet ;"></div>
+    <div class = "confetti" style="left:80% ; top:50 ;background-color:orange ;"></div>
+    <div class = "confetti" style="left:85%; top: ;background-color:red ;"></div>
+    <div class = "confetti" style="left:90% ; top:-50 ;background-color:blue ;"></div>
+    <div class = "confetti" style="left:95% ; top:10 ;background-color:purple ;"></div>
+    <div class = "confetti" style="left:100% ; top:50 ;background-color:yellowgreen ;"></div>
+
+    
+    
+    
+        
+         
+        
+    
+  
+   
+   
+
+</body>
+
+
+</HTML>
